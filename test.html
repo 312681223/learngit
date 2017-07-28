@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="apple-touch-fullscreen" content="YES">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="pragram" content="no-cache">
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,target-densitydpi=device-dpi">
+<title>苏泊尔</title>
+<style type="text/css">
+  
+  .test{
+    width: 100px;
+    height: 100px;
+    background: #000;
+    transition:all 1s ease;
+  }
+  .test.show{
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .hidden{
+    opacity: 0;
+    visibility: hidden;
+  }
+
+</style>
+</head>
+
+<body>
+<div class="test hidden"></div>
+<button id="btn">click</button>
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript">
+var flag=1;
+  document.getElementById('btn').onclick = function(){
+    if(flag ==1){
+      $('.test').removeClass('hidden');
+      flag=2
+    }
+    else{
+      $('.test').addClass('hidden');
+      setTimeout(function(){$('.test').hide();},1000);
+    }
+    
+  }
+
+</script>
+</body>
+</html>
